@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css"; // <-- import the CSS file
-import logo from "../public/logo.png"; // <-- import logo image
+
 
 const Hero = () => {
   return (
