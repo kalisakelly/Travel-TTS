@@ -11,7 +11,7 @@ const toursData = [
     rating: 4.9,
     tags: ["Mountain Hiking", "Scenic Railways", "Alpine Villages"],
     image:
-      "https://images.unsplash.com/photo-1508264165352-258859e62245?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
     details:
       "Experience the majestic Swiss Alps with scenic train rides, mountain hikes, and picturesque alpine villages.",
   },
@@ -96,7 +96,7 @@ const Tours = () => {
 
   return (
     <div className="tours-container">
-      <h2 className="tours-heading">Popular Tours</h2>
+      <h2 className="tours-heading"> Our Itineraries </h2>
 
       <div className="tours-scroll">
         {toursData.map((tour) => (

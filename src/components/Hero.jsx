@@ -1,5 +1,6 @@
 import React from "react";
 import "./Hero.css"; // <-- import the CSS file
+import logo from "../public/logo.png"; // <-- import logo image
 
 const Hero = () => {
   return (
@@ -9,8 +10,8 @@ const Hero = () => {
         <div className="navbar-logo">
           <div className="navbar-icon">
             <i className="fa-solid fa-location-dot"></i>
+            
           </div>
-          <h1>Adventure Tours</h1>
         </div>
 
         <ul className="navbar-links">
@@ -31,13 +32,18 @@ const Hero = () => {
 
         <div className="hero-content">
           <h1>
-            Discover Your Next <br />
-            <span>Adventure</span>
+            Discover Your Next Adventure with <br />
+            <span> ROADTRIP TOURS & TRAVEL Ltd</span>
           </h1>
 
           <p>
-            Expert tour planning and premium car rentals for unforgettable journeys. <br />
-            Explore breathtaking destinations with our professional guides and reliable vehicles.
+            Your Journey, Our Passion.
+
+            At Roadtrip Tours & Travel Ltd, we believe every journey tells a story — yours.
+            We specialize in creating unforgettable travel experiences across Rwanda, East Africa, and beyond, blending nature, culture, and adventure into memories that last a lifetime.
+
+            Whether you dream of a thrilling wildlife safari, a serene lakeside escape, or an immersive cultural encounter, our expert team is here to plan it all — your way.
+
           </p>
 
           <div className="hero-buttons">
@@ -49,7 +55,7 @@ const Hero = () => {
             </button>
           </div>
 
-          <div className="hero-stats">
+          {/* <div className="hero-stats">
             <div>
               <p className="number">500+</p>
               <p>Happy Travelers</p>
@@ -62,7 +68,7 @@ const Hero = () => {
               <p className="number">24/7</p>
               <p>Customer Support</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

@@ -20,12 +20,7 @@ const Services = () => {
       description: "Deep local knowledge and insider access to hidden gems and must-see attractions.",
       features: ["Local Insights", "Hidden Gems", "Cultural Experiences"]
     },
-    {
-      id: 4,
-      title: "24/7 Support",
-      description: "Round-the-clock assistance to ensure your travel experience is smooth and worry-free.",
-      features: ["Emergency Support", "Travel Assistance", "Instant Communication"]
-    }
+    
   ]
 
   return (
