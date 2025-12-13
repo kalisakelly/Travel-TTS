@@ -32,11 +32,69 @@
       "description": "test"
     },
     {
-      "id": "8a60",
       "title": "testing aswell",
       "location": "Kigali",
       "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
-      "description": "teteteteteetet"
+      "description": "BOHforighoiwhirhgior",
+      "id": "8a60"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "title": "Service One",
+      "description": "Description for service one",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "2",
+      "title": "Service Two",
+      "description": "Description for service two",
+      "image": "https://via.placeholder.com/150"
+    }
+  ],
+  "tours": [
+    {
+      "id": "1",
+      "title": "Tour One",
+      "description": "Description for tour one",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "2",
+      "title": "Tour Two",
+      "description": "Description for tour two",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "1f4c",
+      "title": "Tetrr",
+      "location": "trtrtr",
+      "image": "trtr",
+      "description": "trttrtr"
+    }
+  ],
+  "contact": [
+    {
+      "id": "cb70",
+      "name": "Testi",
+      "email": "kelly@gmail.com",
+      "subject": "rtrttrtr",
+      "message": "triughuiwhgiuhtgiuwhtughwiurgh"
+    },
+    {
+      "id": "abd8",
+      "name": "trsdt",
+      "email": "kallr@gmail.com",
+      "subject": "niwonginirogw",
+      "message": "wgtirgwuighiwugniuwrguithr"
+    },
+    {
+      "id": "6869",
+      "name": "trsdt",
+      "email": "kallr@gmail.com",
+      "subject": "niwonginirogw",
+      "message": "wgtirgwuighiwugniuwrguithrLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     }
   ],
   "profile": {

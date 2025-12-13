@@ -15,68 +15,70 @@ const Gallery = () => {
   }, []);
 
   return (
-    <div className="gallery-container">
-      <h2 className="gallery-heading">Explore Our Gallery</h2>
+    <section className="gallery-section" id="gallery">
+      <div className="gallery-container">
+        <h2 className="gallery-heading">Explore Our Gallery</h2>
 
-      <div className="gallery-grid">
-        {galleryData.map((item) => (
-          <div
-            key={item.id}
-            className="gallery-card"
-            onClick={() => setSelectedImage(item)}
-          >
-            <div className="gallery-img-box">
-              <img src={item.image} alt={item.title} />
+        <div className="gallery-grid">
+          {galleryData.map((item) => (
+            <div
+              key={item.id}
+              className="gallery-card"
+              onClick={() => setSelectedImage(item)}
+            >
+              <div className="gallery-img-box">
+                <img src={item.image} alt={item.title} />
+              </div>
+
+              <div className="gallery-info">
+                <h3>{item.title}</h3>
+                <p className="location">
+                  <i className="fa-solid fa-location-dot"></i> {item.location}
+                </p>
+
+                <button
+                  className="view-btn"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedImage(item);
+                  }}
+                >
+                  View Details
+                </button>
+              </div>
             </div>
+          ))}
+        </div>
 
-            <div className="gallery-info">
-              <h3>{item.title}</h3>
-              <p className="location">
-                <i className="fa-solid fa-location-dot"></i> {item.location}
-              </p>
+        {selectedImage && (
+          <div
+            className="modal-overlay"
+            onClick={() => setSelectedImage(null)}
+          >
+            <div
+              className="modal-content"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={selectedImage.image}
+                alt={selectedImage.title}
+                className="modal-image"
+              />
+              <h2>{selectedImage.title}</h2>
+
+              <p>{selectedImage.description}</p>
 
               <button
-                className="view-btn"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setSelectedImage(item);
-                }}
+                className="close-btn"
+                onClick={() => setSelectedImage(null)}
               >
-                View Details
+                ✕ Close
               </button>
             </div>
           </div>
-        ))}
+        )}
       </div>
-
-      {selectedImage && (
-        <div
-          className="modal-overlay"
-          onClick={() => setSelectedImage(null)}
-        >
-          <div
-            className="modal-content"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <img
-              src={selectedImage.image}
-              alt={selectedImage.title}
-              className="modal-image"
-            />
-            <h2>{selectedImage.title}</h2>
-
-            <p>{selectedImage.description}</p>
-
-            <button
-              className="close-btn"
-              onClick={() => setSelectedImage(null)}
-            >
-              ✕ Close
-            </button>
-          </div>
-        </div>
-      )}
-    </div>
+    </section>
   );
 };
 
