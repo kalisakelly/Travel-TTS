@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import './GalleryCrud.css'; // Create this CSS file or use inline styles as shown
 
-const API_URL = "http://localhost:3001/gallery";
+const API_URL = "http://localhost:3001/galler";
 
 function GalleryCrud() {
   const [items, setItems] = useState([]);

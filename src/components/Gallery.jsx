@@ -2,16 +2,28 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Gallery.css";
 
-const API_URL = "http://localhost:3001/gallery";
+const BASE_URL = "http://msacco.local2:8003";
+const API_URL =
+  `${BASE_URL}/api/resource/Gallery?fields=["name","title","image","description"]`;
 
 const Gallery = () => {
   const [galleryData, setGalleryData] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
-    axios.get(API_URL).then((res) => {
-      setGalleryData(res.data);
-    });
+    axios
+      .get(API_URL)
+      .then((res) => {
+        // ✅ Frappe data is inside res.data.data
+        const data = res.data.data.map((item) => ({
+          ...item,
+          image: item.image ? `${BASE_URL}${item.image}` : "",
+        }));
+        setGalleryData(data);
+      })
+      .catch((err) => {
+        console.error("Gallery API error:", err);
+      });
   }, []);
 
   return (
@@ -22,7 +34,7 @@ const Gallery = () => {
         <div className="gallery-grid">
           {galleryData.map((item) => (
             <div
-              key={item.id}
+              key={item.name} // ✅ use name, not id
               className="gallery-card"
               onClick={() => setSelectedImage(item)}
             >
@@ -32,9 +44,6 @@ const Gallery = () => {
 
               <div className="gallery-info">
                 <h3>{item.title}</h3>
-                <p className="location">
-                  <i className="fa-solid fa-location-dot"></i> {item.location}
-                </p>
 
                 <button
                   className="view-btn"
