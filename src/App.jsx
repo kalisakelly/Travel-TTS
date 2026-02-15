@@ -15,6 +15,7 @@ import GalleryCrud from "./components/GalleryCrud";
 import ServicesCrud from "./components/ServicesCrud";
 import ToursCrud from "./components/ToursCrud";
 import AdminLayout from './components/AdminLayout';
+import GroupTrips from "./components/GroupTrips";
 
 
 function App() {
@@ -28,10 +29,11 @@ function App() {
           element={
             <>
               <Hero />
-              <Destinations />
+              {/* <Destinations /> */}
               <Services />
               <Tours />
-              <Gallery /> 
+              <Gallery />
+              <GroupTrips />
               <Stats />
               <ContactUs />
             </>

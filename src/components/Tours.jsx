@@ -15,7 +15,7 @@ const API_URL = `${BASE_URL}/api/resource/Tours?fields=[
   "pdf_doc"
 ]`;
 
-const normalizeImage = (image) => {
+ const normalizeImage = (image) => {
   if (!image) return "";
   if (image.startsWith("http")) return image; // already full URL
   return `${BASE_URL}${image}`; // relative Frappe file

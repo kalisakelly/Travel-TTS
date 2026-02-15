@@ -1,0 +1,134 @@
+.services-section {
+  padding: 80px 5%;
+  background: #f8fafc;
+  overflow: hidden;
+}
+
+.services-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+}
+
+.services-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 15px;
+}
+
+.services-header p {
+  color: #6b7280;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Slider Wrapper */
+.slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Horizontal Slider */
+.services-slider {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+  scrollbar-width: none;
+}
+
+.services-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cards */
+.service-card {
+  min-width: 320px;
+  max-width: 320px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  flex-shrink: 0;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #1f2937;
+}
+
+.service-card .description {
+  color: #6b7280;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.service-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-card li {
+  margin-bottom: 8px;
+  color: #374151;
+  font-size: 0.95rem;
+  position: relative;
+  padding-left: 18px;
+}
+
+.service-card li::before {
+  content: "•";
+  color: #0b5d4a;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Slider Buttons */
+.slider-btn {
+  background: white;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.slider-btn:hover {
+  background: #0b5d4a;
+  color: white;
+}
+
+.slider-btn.left {
+  margin-right: 10px;
+}
+
+.slider-btn.right {
+  margin-left: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-header h2 {
+    font-size: 2rem;
+  }
+
+  .service-card {
+    min-width: 260px;
+    max-width: 260px;
+  }
+}
